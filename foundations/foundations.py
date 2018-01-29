@@ -51,3 +51,15 @@ S = "abppplee"
 D = {"able", "ale", "apple", "bale", "kangaroo"}
 print(find_longest_word_in_string(S, D))
 assert find_longest_word_in_string(S, D) == 'apple'
+
+
+def string_splosion(string):
+    """
+    Given a non-empty string like "Code" return a string like "CCoCodCode".
+    :param string: non-empty string
+    :return: resulting string
+    """
+    result = ''
+    for i in range(len(string) + 1):
+        result += string[:i]
+    return result
